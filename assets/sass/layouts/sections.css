@@ -1,0 +1,9 @@
+.fonctionnement__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.restaurants {
+  margin-bottom: -10px;
+}/*# sourceMappingURL=sections.css.map */

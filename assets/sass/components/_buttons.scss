@@ -1,0 +1,10 @@
+.btn {
+    border-radius: 20px;
+    color: white;
+    background: linear-gradient(to right bottom, $secondary-color, $primary-color);
+    max-width: 200px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    margin-left: 20%;
+}

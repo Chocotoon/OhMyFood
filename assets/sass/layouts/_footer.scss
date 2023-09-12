@@ -1,0 +1,19 @@
+footer {
+    background-color: #353535;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 10px 10px;
+    h3 {
+        color: white;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        a{
+            text-decoration: none;
+            line-height: 25px;
+            color: white;
+        }
+    }
+}

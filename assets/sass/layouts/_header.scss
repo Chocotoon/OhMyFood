@@ -1,0 +1,27 @@
+header {
+    .intro {
+        background-color: $background-color;
+        padding: 35px 0px;
+        margin-bottom: 50px;
+        p {
+            text-align: center;
+        }
+    }
+    h1 {
+        text-align: center;
+    }
+    h2 {
+        font-family: 'Roboto';
+        margin: auto 20px;
+        text-align: center;
+    }
+}
+
+header span {
+        display: flex;
+        justify-content: center;
+        background-color: darken($background-color, 5%);
+        height: 40px;
+        align-items: center;
+    }
+
