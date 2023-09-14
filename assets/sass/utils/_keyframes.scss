@@ -1,0 +1,10 @@
+@keyframes fade-in-sections {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}

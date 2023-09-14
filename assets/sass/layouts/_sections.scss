@@ -1,0 +1,117 @@
+#fonctionnement {
+    margin-bottom: 40px;
+    h2 {
+        margin-left: 3%;
+    }
+}
+.fonctionnement__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    i {
+        color: lightgray;
+    }
+    :nth-child(3) i {
+        color: $primary-color;
+    }
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+#restaurants {
+    background-color: $background-color;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    h2 {
+        margin-left: 3%;
+    }
+}
+
+.restaurants__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    @media screen and (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: 400px 400px;
+        justify-content: center;
+        gap: 5%;
+    }
+}
+
+.menu {
+    background: #f6f6f6;
+    padding-top: 30px;
+    margin-top: 200px;
+    z-index: 50;
+    position: relative;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+    @media screen and (min-width: 1024px) {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .menu_title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 20px;
+        width: 80%;
+    }
+    .menu_section_title {
+        text-transform: uppercase;
+        border-bottom: 3px solid $tertiary-color;
+        padding-bottom: 10px;
+        width: 10%;
+        @media screen and (min-width: 1023px) {
+            width: 6%;
+        }
+    }
+    .menu_card {
+        background-color: white;
+        padding: 1px;
+        line-height: 1px;
+        min-width: 300px;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        @media screen and (min-width: 1024px) {
+            max-width: none;
+            width: 600px;
+        }
+        h3 {
+            margin: 5% 0% 0% 2%;
+            font-size: inherit;
+        }
+        span {
+            display: flex;
+            justify-content: space-between;
+            margin: 2%;
+            p {
+                font-size: small;
+            }
+        }
+    }
+    .menu .btn {
+        margin-top: 10px;
+    }
+}
+#entrees,
+#plats,
+#desserts {
+    animation: fade-in-sections 800ms;
+}
+#plats {
+    animation-delay: 500ms;
+}
+#desserts {
+    animation-delay: 1000ms;
+}

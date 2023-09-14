@@ -1,7 +1,8 @@
 @import "./utils/variables";
-@import "./base/_typo_index.scss";
+@import "./base/typo_index";
 @import "./layouts/cards";
 @import "./layouts/footer";
 @import "./layouts/sections";
 @import "./layouts/header";
 @import "./components/buttons";
+@import "./base/normalize";
