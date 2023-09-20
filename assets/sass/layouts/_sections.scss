@@ -82,7 +82,9 @@
         line-height: 1px;
         min-width: 300px;
         text-overflow: ellipsis;
+        overflow: hidden;
         cursor: pointer;
+        position: relative;
         @media screen and (min-width: 1024px) {
             max-width: none;
             width: 600px;
@@ -98,6 +100,17 @@
             p {
                 font-size: small;
             }
+        }
+
+        .prix {
+            transition: transform 500ms;
+        }
+        &:hover >button, &:hover >.prix {
+            transform: translateX(-60px);
+            opacity: 1;
+        }
+        &:active >button, &:hover >span .prix {
+            transform: translateX(-60px);
         }
     }
     .menu .btn {

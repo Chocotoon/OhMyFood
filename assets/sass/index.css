@@ -43,14 +43,6 @@ body {
   padding-bottom: 10px;
   height: 275px;
   width: 300px;
-  /*.fa-regular {
-      content: "../images_et_textes/images/heart-solid.png";
-      background-clip: white;
-      transition: background-clip, 0.5S;
-  }
-  .fa-regular:active {
-      background-clip: $primary-color;
-  }*/
 }
 .restaurant__card img {
   max-width: inherit;
@@ -71,14 +63,29 @@ body {
   background-color: #99E2D0;
   color: #008766;
 }
-.restaurant__card .fa-solid {
-  color: #9356DC;
-}
 @media screen and (min-width: 1024px) {
   .restaurant__card {
     max-width: 400px;
     width: 100%;
   }
+}
+
+.card_hearts {
+  position: relative;
+}
+.card_hearts .fa-heart {
+  position: absolute;
+}
+.card_hearts .fa-solid {
+  -webkit-background-clip: text;
+          background-clip: text;
+  transition: opacity, 0.5s;
+  opacity: 0;
+  background-image: linear-gradient(to top, #FF79DA, #9356DC);
+  color: transparent;
+}
+.card_hearts .fa-solid:hover, .card_hearts .fa-solid:active {
+  opacity: 1;
 }
 
 .restaurant__info {
@@ -227,7 +234,9 @@ footer nav a {
   line-height: 1px;
   min-width: 300px;
   text-overflow: ellipsis;
+  overflow: hidden;
   cursor: pointer;
+  position: relative;
 }
 @media screen and (min-width: 1024px) {
   .menu .menu_card {
@@ -246,6 +255,16 @@ footer nav a {
 }
 .menu .menu_card span p {
   font-size: small;
+}
+.menu .menu_card .prix {
+  transition: transform 500ms;
+}
+.menu .menu_card:hover > button, .menu .menu_card:hover > .prix {
+  transform: translateX(-60px);
+  opacity: 1;
+}
+.menu .menu_card:active > button, .menu .menu_card:hover > span .prix {
+  transform: translateX(-60px);
 }
 .menu .menu .btn {
   margin-top: 10px;
@@ -326,6 +345,37 @@ header span {
 .btn:hover {
   opacity: 0.8;
   box-shadow: 0px 4px 15px grey;
+}
+
+.menu_card button {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: transform 500ms;
+  position: absolute;
+  right: -60px;
+  height: 85px;
+  top: 0;
+  background-color: #99E2D0;
+  width: 15%;
+  border: none;
+}
+@media screen and (min-width: 1024px) {
+  .menu_card button {
+    width: 10%;
+  }
+}
+.menu_card button i {
+  color: white;
+  background-color: white;
+  -webkit-background-clip: text;
+          background-clip: text;
+  font-size: large;
+  margin-bottom: 70%;
+}
+@media screen and (min-width: 1024px) {
+  .menu_card button i {
+    margin-bottom: 0px;
+  }
 }
 
 body {

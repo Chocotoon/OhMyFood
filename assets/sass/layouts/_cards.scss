@@ -53,20 +53,25 @@
         background-color: $tertiary-color;
         color: #008766;
     }
-    .fa-solid {
-        color: $primary-color;
-    }
-    /*.fa-regular {
-        content: "../images_et_textes/images/heart-solid.png";
-        background-clip: white;
-        transition: background-clip, 0.5S;
-    }
-    .fa-regular:active {
-        background-clip: $primary-color;
-    }*/
     @media screen and (min-width: 1024px) {
         max-width: 400px;
         width: 100%;
+    }
+}
+.card_hearts {
+    position: relative;
+    .fa-heart {
+        position: absolute;
+    }
+    .fa-solid{
+        background-clip: text;
+        transition: opacity, 0.5s;
+        opacity: 0;
+        background-image: linear-gradient(to top, $secondary-color, $primary-color);
+        color: transparent;
+    }
+    .fa-solid:hover, .fa-solid:active {
+        opacity: 1;
     }
 }
 .restaurant__info {
