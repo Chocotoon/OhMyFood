@@ -79,19 +79,24 @@
     .menu_card {
         background-color: white;
         padding: 1px;
-        line-height: 1px;
         min-width: 300px;
         text-overflow: ellipsis;
         overflow: hidden;
         cursor: pointer;
         position: relative;
+        height: 60px;
         @media screen and (min-width: 1024px) {
             max-width: none;
             width: 600px;
+            height: 80px;
         }
         h3 {
             margin: 5% 0% 0% 2%;
             font-size: inherit;
+            line-height: 1px;
+            @media screen and (min-width: 1024px) {
+                margin-top: 4%;                
+            }
         }
         span {
             display: flex;
@@ -101,20 +106,27 @@
                 font-size: small;
             }
         }
-
+        .sous_titre {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            white-space: nowrap;
+        }
         .prix {
             transition: transform 500ms;
         }
         &:hover >button, &:hover >.prix {
-            transform: translateX(-60px);
+            transform: translateX(-65px);
             opacity: 1;
         }
         &:active >button, &:hover >span .prix {
             transform: translateX(-60px);
         }
-    }
-    .menu .btn {
-        margin-top: 10px;
+        &:hover > span .sous_titre {
+            transform: scaleX(0.65);
+            transform-origin: left 50%;
+            font-size: inherit;
+        }
     }
 }
 #entrees,
@@ -127,4 +139,5 @@
 }
 #desserts {
     animation-delay: 1000ms;
+    margin-bottom: 20px;
 }

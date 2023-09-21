@@ -231,22 +231,29 @@ footer nav a {
 .menu .menu_card {
   background-color: white;
   padding: 1px;
-  line-height: 1px;
   min-width: 300px;
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: pointer;
   position: relative;
+  height: 60px;
 }
 @media screen and (min-width: 1024px) {
   .menu .menu_card {
     max-width: none;
     width: 600px;
+    height: 80px;
   }
 }
 .menu .menu_card h3 {
   margin: 5% 0% 0% 2%;
   font-size: inherit;
+  line-height: 1px;
+}
+@media screen and (min-width: 1024px) {
+  .menu .menu_card h3 {
+    margin-top: 4%;
+  }
 }
 .menu .menu_card span {
   display: flex;
@@ -256,18 +263,26 @@ footer nav a {
 .menu .menu_card span p {
   font-size: small;
 }
+.menu .menu_card .sous_titre {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: nowrap;
+}
 .menu .menu_card .prix {
   transition: transform 500ms;
 }
 .menu .menu_card:hover > button, .menu .menu_card:hover > .prix {
-  transform: translateX(-60px);
+  transform: translateX(-65px);
   opacity: 1;
 }
 .menu .menu_card:active > button, .menu .menu_card:hover > span .prix {
   transform: translateX(-60px);
 }
-.menu .menu .btn {
-  margin-top: 10px;
+.menu .menu_card:hover > span .sous_titre {
+  transform: scaleX(0.65);
+  transform-origin: left 50%;
+  font-size: inherit;
 }
 
 #entrees,
@@ -282,6 +297,7 @@ footer nav a {
 
 #desserts {
   animation-delay: 1000ms;
+  margin-bottom: 20px;
 }
 
 header .intro {
@@ -352,7 +368,7 @@ header span {
   border-bottom-right-radius: 20px;
   transition: transform 500ms;
   position: absolute;
-  right: -60px;
+  right: -65px;
   height: 85px;
   top: 0;
   background-color: #99E2D0;
@@ -362,6 +378,7 @@ header span {
 @media screen and (min-width: 1024px) {
   .menu_card button {
     width: 10%;
+    height: 100px;
   }
 }
 .menu_card button i {
@@ -374,7 +391,7 @@ header span {
 }
 @media screen and (min-width: 1024px) {
   .menu_card button i {
-    margin-bottom: 0px;
+    margin-bottom: 20%;
   }
 }
 

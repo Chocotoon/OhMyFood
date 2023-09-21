@@ -21,7 +21,7 @@
     border-bottom-right-radius: 20px;
     transition: transform 500ms;
     position: absolute;
-    right: -60px;
+    right: -65px;
     height: 85px;
     top: 0;
     background-color: $tertiary-color;
@@ -29,6 +29,7 @@
     border: none;
     @media screen and (min-width: 1024px) {
         width: 10%;
+        height: 100px;
     }
     i {
         color: white;
@@ -37,7 +38,7 @@
         font-size: large;
         margin-bottom: 70%;
         @media screen and (min-width: 1024px) {
-            margin-bottom: 0px;
+            margin-bottom: 20%;
         }
     }
 }
