@@ -98,7 +98,7 @@
                 margin-top: 4%;                
             }
         }
-        span {
+        div {
             display: flex;
             justify-content: space-between;
             margin: 2%;
@@ -115,14 +115,14 @@
         .prix {
             transition: transform 500ms;
         }
-        &:hover >button, &:hover >.prix {
+        &:hover >button, &:hover >div .prix {
             transform: translateX(-65px);
             opacity: 1;
         }
-        &:active >button, &:hover >span .prix {
+        &:active >button, &:hover >div .prix {
             transform: translateX(-60px);
         }
-        &:hover > span .sous_titre {
+        &:hover > div .sous_titre {
             transform: scaleX(0.65);
             transform-origin: left 50%;
             font-size: inherit;

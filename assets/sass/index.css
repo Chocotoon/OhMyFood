@@ -255,12 +255,12 @@ footer nav a {
     margin-top: 4%;
   }
 }
-.menu .menu_card span {
+.menu .menu_card div {
   display: flex;
   justify-content: space-between;
   margin: 2%;
 }
-.menu .menu_card span p {
+.menu .menu_card div p {
   font-size: small;
 }
 .menu .menu_card .sous_titre {
@@ -272,14 +272,14 @@ footer nav a {
 .menu .menu_card .prix {
   transition: transform 500ms;
 }
-.menu .menu_card:hover > button, .menu .menu_card:hover > .prix {
+.menu .menu_card:hover > button, .menu .menu_card:hover > div .prix {
   transform: translateX(-65px);
   opacity: 1;
 }
-.menu .menu_card:active > button, .menu .menu_card:hover > span .prix {
+.menu .menu_card:active > button, .menu .menu_card:hover > div .prix {
   transform: translateX(-60px);
 }
-.menu .menu_card:hover > span .sous_titre {
+.menu .menu_card:hover > div .sous_titre {
   transform: scaleX(0.65);
   transform-origin: left 50%;
   font-size: inherit;
