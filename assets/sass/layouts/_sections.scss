@@ -95,7 +95,7 @@
             font-size: inherit;
             line-height: 1px;
             @media screen and (min-width: 1024px) {
-                margin-top: 4%;                
+                margin-top: 4%;
             }
         }
         div {
@@ -115,11 +115,13 @@
         .prix {
             transition: transform 500ms;
         }
-        &:hover >button, &:hover >div .prix {
+        &:hover > button,
+        &:hover > div .prix {
             transform: translateX(-65px);
             opacity: 1;
         }
-        &:active >button, &:hover >div .prix {
+        &:active > button,
+        &:hover > div .prix {
             transform: translateX(-60px);
         }
         &:hover > div .sous_titre {
@@ -140,4 +142,31 @@
 #desserts {
     animation-delay: 1000ms;
     margin-bottom: 20px;
+}
+
+.loader_wrap {
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    height: 150vh;
+    margin-top: -50px;
+    background-color: $tertiary-color;
+    animation: fade-loader 3s;
+    opacity: 0;
+    bottom: 999px;
+    .loader {
+        width: 50px;
+        height: 50px;
+        border: 2px solid white;
+        border-radius: 50px;
+        position: absolute;
+        top: 60%;
+        left: 45%;
+        border-top: 5px solid $secondary-color;
+        border-right: 5px solid $primary-color;
+        animation: loader-animation 1s infinite ease-out;
+        @media screen and (min-width: 1024px) {
+            left: 48%;
+        }
+    }
 }

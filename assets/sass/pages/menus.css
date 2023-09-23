@@ -8,6 +8,32 @@
     opacity: 1;
   }
 }
+@keyframes loader-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade-loader {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(999px);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(999px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
 h1, h2 {
   font-family: "Shrikhand";
 }
@@ -321,6 +347,35 @@ footer nav a {
 #desserts {
   animation-delay: 1000ms;
   margin-bottom: 20px;
+}
+
+.loader_wrap {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 150vh;
+  margin-top: -50px;
+  background-color: #99E2D0;
+  animation: fade-loader 3s;
+  opacity: 0;
+  bottom: 999px;
+}
+.loader_wrap .loader {
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 50px;
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  border-top: 5px solid #FF79DA;
+  border-right: 5px solid #9356DC;
+  animation: loader-animation 1s infinite ease-out;
+}
+@media screen and (min-width: 1024px) {
+  .loader_wrap .loader {
+    left: 48%;
+  }
 }
 
 .card {

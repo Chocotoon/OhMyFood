@@ -8,3 +8,31 @@
         opacity: 1;
     }
 }
+
+@keyframes loader-animation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade-loader {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(999px);
+        opacity: 1;
+    }
+    90% {
+        transform: translateY(999px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
