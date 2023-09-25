@@ -1,7 +1,7 @@
 #fonctionnement {
     margin-bottom: 40px;
     h2 {
-        margin-left: 3%;
+        margin-left: 7%;
     }
 }
 .fonctionnement__info {
@@ -24,7 +24,7 @@
     padding-top: 10px;
     padding-bottom: 30px;
     h2 {
-        margin-left: 3%;
+        margin-left: 7%;
     }
 }
 
@@ -37,10 +37,9 @@
         color: black;
     }
     @media screen and (min-width: 1024px) {
-        display: grid;
-        grid-template-columns: 400px 400px;
-        justify-content: center;
-        gap: 5%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 }
 

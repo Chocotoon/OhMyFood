@@ -192,7 +192,7 @@ footer nav a {
   margin-bottom: 40px;
 }
 #fonctionnement h2 {
-  margin-left: 3%;
+  margin-left: 7%;
 }
 
 .fonctionnement__info {
@@ -219,7 +219,7 @@ footer nav a {
   padding-bottom: 30px;
 }
 #restaurants h2 {
-  margin-left: 3%;
+  margin-left: 7%;
 }
 
 .restaurants__list {
@@ -233,10 +233,9 @@ footer nav a {
 }
 @media screen and (min-width: 1024px) {
   .restaurants__list {
-    display: grid;
-    grid-template-columns: 400px 400px;
-    justify-content: center;
-    gap: 5%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 }
 
@@ -394,6 +393,7 @@ footer nav a {
   align-items: center;
   position: relative;
   margin-top: 10px;
+  max-width: 260px;
 }
 .fonctionnement__info__card .vignette {
   color: white;
@@ -439,6 +439,7 @@ footer nav a {
   .restaurant__card {
     max-width: 400px;
     width: 100%;
+    margin: 0% 5% 2%;
   }
 }
 
