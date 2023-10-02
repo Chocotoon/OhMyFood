@@ -28,20 +28,26 @@
     p {
         margin-right: 10%;
     }
+    @media screen and (min-width: 1200px) {
+        max-width: 280px;        
+    }
+    @media screen and (min-width: 1300px) {
+        max-width: 300px;        
+    }
 }
 
 .restaurant__card {
     background-color: white;
     position: relative;
     padding-bottom: 10px;
-    height: 275px;
+    height: 250px;
     width: 300px;
     img {
         max-width: inherit;
         object-fit: cover;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-        max-height: 200px;
+        max-height: 180px;
         width: 100%;
     }
     .card__title {
@@ -57,7 +63,10 @@
     @media screen and (min-width: 1024px) {
         max-width: 400px;
         width: 100%;
-        margin: 0% 5% 2%;
+        margin-bottom: 5%;
+    }
+    @media screen and (min-width: 1300px) {
+        max-width: 480px;
     }
 }
 .card_hearts {
@@ -82,4 +91,56 @@
     align-items: center;
     margin-left: -30px;
     margin-right: -20px;
+}
+
+.menu_card {
+    background-color: white;
+    padding: 10px;
+    min-width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    height: 50px;
+    @media screen and (min-width: 767px) {
+        max-width: none;
+        width: 600px;
+        height: 60px;
+    }
+    h3 {
+        margin: 0;
+        font-size: inherit;
+        @media screen and (min-width: 1024px) {
+            margin-top: 1%;
+        }
+    }
+    div {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+    }
+    .sous_titre {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        white-space: nowrap;
+    }
+    .prix {
+        transition: transform 500ms;
+    }
+    &:hover > button,
+    &:hover > div .prix {
+        transform: translateX(-65px);
+        opacity: 1;
+    }
+    &:active > button,
+    &:active > div .prix {
+        transform: translateX(-57px);
+    }
+    &:hover > div .sous_titre, &:hover h3 {
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       width: 70%;
+    }
 }

@@ -49,7 +49,6 @@ body {
 header .intro {
   background-color: #F3F3F3;
   padding: 35px 0px;
-  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,14 +164,8 @@ footer nav a {
   height: 85px;
   top: 0;
   background-color: #99E2D0;
-  width: 15%;
+  width: 60px;
   border: none;
-}
-@media screen and (min-width: 1024px) {
-  .menu_card button {
-    width: 10%;
-    height: 100px;
-  }
 }
 .menu_card button i {
   color: white;
@@ -180,19 +173,31 @@ footer nav a {
   -webkit-background-clip: text;
           background-clip: text;
   font-size: large;
-  margin-bottom: 70%;
+  margin-bottom: 30%;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 767px) {
   .menu_card button i {
     margin-bottom: 20%;
   }
 }
 
-#fonctionnement {
-  margin-bottom: 40px;
-}
 #fonctionnement h2 {
   margin-left: 7%;
+}
+@media screen and (min-width: 1024px) {
+  #fonctionnement h2 {
+    margin-left: 0px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #fonctionnement {
+    padding: 0px 100px 40px 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #fonctionnement {
+    padding: 20px 150px 20px 150px;
+  }
 }
 
 .fonctionnement__info {
@@ -209,17 +214,32 @@ footer nav a {
 @media screen and (min-width: 1024px) {
   .fonctionnement__info {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
 
 #restaurants {
-  background-color: #F3F3F3;
   padding-top: 10px;
   padding-bottom: 30px;
+  background-color: #F3F3F3;
 }
 #restaurants h2 {
   margin-left: 7%;
+}
+@media screen and (min-width: 1024px) {
+  #restaurants h2 {
+    margin-left: 0px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #restaurants {
+    padding: 20px 100px 20px 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #restaurants {
+    padding: 20px 150px 20px 150px;
+  }
 }
 
 .restaurants__list {
@@ -235,7 +255,8 @@ footer nav a {
   .restaurants__list {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-bottom: -4%;
   }
 }
 
@@ -275,62 +296,6 @@ footer nav a {
   .menu .menu_section_title {
     width: 6%;
   }
-}
-.menu .menu_card {
-  background-color: white;
-  padding: 1px;
-  min-width: 300px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
-  height: 60px;
-}
-@media screen and (min-width: 1024px) {
-  .menu .menu_card {
-    max-width: none;
-    width: 600px;
-    height: 80px;
-  }
-}
-.menu .menu_card h3 {
-  margin: 5% 0% 0% 2%;
-  font-size: inherit;
-  line-height: 1px;
-}
-@media screen and (min-width: 1024px) {
-  .menu .menu_card h3 {
-    margin-top: 4%;
-  }
-}
-.menu .menu_card div {
-  display: flex;
-  justify-content: space-between;
-  margin: 2%;
-}
-.menu .menu_card div p {
-  font-size: small;
-}
-.menu .menu_card .sous_titre {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
-  white-space: nowrap;
-}
-.menu .menu_card .prix {
-  transition: transform 500ms;
-}
-.menu .menu_card:hover > button, .menu .menu_card:hover > div .prix {
-  transform: translateX(-65px);
-  opacity: 1;
-}
-.menu .menu_card:active > button, .menu .menu_card:hover > div .prix {
-  transform: translateX(-60px);
-}
-.menu .menu_card:hover > div .sous_titre {
-  transform: scaleX(0.65);
-  transform-origin: left 50%;
-  font-size: inherit;
 }
 
 #entrees,
@@ -408,12 +373,22 @@ footer nav a {
 .fonctionnement__info__card p {
   margin-right: 10%;
 }
+@media screen and (min-width: 1200px) {
+  .fonctionnement__info__card {
+    max-width: 280px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .fonctionnement__info__card {
+    max-width: 300px;
+  }
+}
 
 .restaurant__card {
   background-color: white;
   position: relative;
   padding-bottom: 10px;
-  height: 275px;
+  height: 250px;
   width: 300px;
 }
 .restaurant__card img {
@@ -422,7 +397,7 @@ footer nav a {
      object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  max-height: 200px;
+  max-height: 180px;
   width: 100%;
 }
 .restaurant__card .card__title {
@@ -439,7 +414,12 @@ footer nav a {
   .restaurant__card {
     max-width: 400px;
     width: 100%;
-    margin: 0% 5% 2%;
+    margin-bottom: 5%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .restaurant__card {
+    max-width: 480px;
   }
 }
 
@@ -467,4 +447,58 @@ footer nav a {
   align-items: center;
   margin-left: -30px;
   margin-right: -20px;
+}
+
+.menu_card {
+  background-color: white;
+  padding: 10px;
+  min-width: 300px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  height: 50px;
+}
+@media screen and (min-width: 767px) {
+  .menu_card {
+    max-width: none;
+    width: 600px;
+    height: 60px;
+  }
+}
+.menu_card h3 {
+  margin: 0;
+  font-size: inherit;
+}
+@media screen and (min-width: 1024px) {
+  .menu_card h3 {
+    margin-top: 1%;
+  }
+}
+.menu_card div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+.menu_card .sous_titre {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: nowrap;
+}
+.menu_card .prix {
+  transition: transform 500ms;
+}
+.menu_card:hover > button, .menu_card:hover > div .prix {
+  transform: translateX(-65px);
+  opacity: 1;
+}
+.menu_card:active > button, .menu_card:active > div .prix {
+  transform: translateX(-57px);
+}
+.menu_card:hover > div .sous_titre, .menu_card:hover h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 70%;
 }/*# sourceMappingURL=menus.css.map */
